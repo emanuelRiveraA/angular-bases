@@ -1,0 +1,22 @@
+<h3>Lista de empleados</h3>
+<ul class="list-group">
+    <li *ngFor="let employee of employeesList;
+                let isfirst = first;
+                let isLast = last;
+                let isEven = even;
+               "
+        class="list-group-item d-flex justify-content-between"
+        [ngClass]="{ 'list-group-item-dark': isLast, 'list-group-item-primary': isEven }"
+        >
+        <div>
+            {{ employee.name }} 
+            {{ employee.lastname }} 
+            - <strong>{{ employee.salary | currency}}</strong> 
+        </div>
+
+        <button class="btn btn-danger align-left" (click)="onDelete(employee.id)">
+            X
+        </button>
+
+    </li>
+</ul>

@@ -14,7 +14,7 @@ export class AddCharacterComponent {
   public onNewCharacter: EventEmitter<Character> = new EventEmitter();
 
   public character: Character = {
-    id: uuid(),
+    id: '',
     name: '',
     power:0,
   };

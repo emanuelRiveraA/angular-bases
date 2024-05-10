@@ -1,0 +1,10 @@
+<h3>Registrar empleado</h3>
+<form class="row" (ngSubmit)="employeeEmit()">
+    <input type="text" class="form-control mb-2" [(ngModel)]="employee.name" name="name" placeholder="name">
+    <input type="text" class="form-control mb-2" [(ngModel)]="employee.lastname" name="lastname" placeholder="lastname">
+    <input type="number" class="form-control mb-2" [(ngModel)]="employee.salary" name="salary" placeholder="salary">
+
+    <button class="btn btn-primary">
+        registrar
+    </button>
+</form>
